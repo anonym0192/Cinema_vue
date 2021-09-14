@@ -20,15 +20,15 @@ See movie images and galleries
 
 ## Libs used in project
 
-  "animate.css": "^4.1.1",
-  "bootstrap": "^4.6.0",
-  "bootstrap-vue": "^2.21.2",
-  "core-js": "^3.6.5",
-  "lodash": "^4.17.21",
-  "vue": "^2.6.11",
-  "vue-agile": "^1.1.3",
-  "vue-router": "^3.5.1",
-  "vuex": "^3.6.2"
+    "animate.css": "^4.1.1",
+    "bootstrap": "^4.6.0",
+    "bootstrap-vue": "^2.21.2",
+    "core-js": "^3.6.5",
+    "lodash": "^4.17.21",
+    "vue": "^2.6.11",
+    "vue-agile": "^1.1.3",
+    "vue-router": "^3.5.1",
+    "vuex": "^3.6.2"
     
 
 ## Configuration
