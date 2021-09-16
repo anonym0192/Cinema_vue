@@ -26,7 +26,6 @@
 
     export default {
         name: 'Home',
-
         methods:{
             ...mapActions('movieData',['getMovieList'])
         },

@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
   "name": "VueMovies",
   "version": "0.1.0",
+=======
+  "name": "Cinema Vue",
+  "version": "1.0",
+>>>>>>> cba22804095744345156c161ce11adf3a9f14a5f
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
