@@ -19,8 +19,8 @@
                         </b-badge>
                     </p> 
                     <p><strong>{{$t('original_language')}}: </strong>{{movie.original_language}}</p>
-                    <p v-if="movie.production_countries.length > 0">
-                        <strong>{{$t('country')}}: </strong>{{movie.production_countries[0].name}}
+                    <p v-if="movie.production_countries">
+                        <strong>{{$t('country')}}: </strong>{{movie.production_countries}}
                     </p>
                     <p v-if="movie.vote_average">
                         <strong>{{$t('rating')}}: </strong> 
@@ -36,8 +36,8 @@
         </transition>
         <div class="movie-meta">
             <span><b-icon icon="calendar"></b-icon> {{$t('release_date')}} {{movie.release_date}}</span>
-            <span><b-icon icon="clock"></b-icon> {{$t('duration')}} {{movie.runtime}}</span>
-            <span><b-icon icon="cash"></b-icon> {{$t('budget')}} {{movie.budget}}</span>
+            <span><b-icon icon="clock"></b-icon> {{$t('duration')}} {{movie.runtime}} min</span>
+            <span><b-icon icon="cash"></b-icon> {{$t('budget')}} {{movie.budget}} $</span>
         </div> 
     </section>
 </template>

@@ -2,8 +2,11 @@ const key = process.env.VUE_APP_API_KEY;//'ab09e88f4eab1d64c6cd9285f52979a0';
 const basename = process.env.VUE_APP_API_BASEURL;//'https://api.themoviedb.org/3';
 const image_base = process.env.VUE_APP_IMAGE_BASEURL;//'https://image.tmdb.org/t/p';
 
-import lang from "./utils/languages";
+//import lang from "./utils/languages";
 import placeholder from './assets/images/No_picture_available.png'
+
+
+const selectedLanguage = localStorage.getItem('lang') || 'en';
 
 export default {
 
@@ -15,7 +18,7 @@ export default {
             return document.location.href = "/";
         }
        
-        const res = await fetch(`${basename}/movie/${type}?api_key=${key}&language=pt-BR&page=${page}`);
+        const res = await fetch(`${basename}/movie/${type}?api_key=${key}&language=${selectedLanguage}&page=${page}`);
         const json = await res.json();
     
         if(!json.results){
@@ -35,7 +38,7 @@ export default {
     
     getMovie: async (id) => {
 
-        const res = await fetch(`${basename}/movie/${id}?api_key=${key}&language=pt-BR`);
+        const res = await fetch(`${basename}/movie/${id}?api_key=${key}&language=${selectedLanguage}`);
         const json = await res.json();
 
         if(json.status_message){
@@ -48,8 +51,10 @@ export default {
         }else{
             json['poster_path'] = placeholder;
         }
+
+        json['production_countries'] = json['production_countries'].map((item)=> item['name']).join(', ');
         
-        json['original_language'] = lang.getLanguageName(json['original_language']);
+        //json['original_language'] = lang.getLanguageName(json['original_language']);
        
         return json;
     },
@@ -73,7 +78,7 @@ export default {
 
     getSimilarMovies: async (id, page = 1) => {
 
-        const res = await fetch(`${basename}/movie/${id}/similar?api_key=${key}&language=pt-BR&page=${page}`);
+        const res = await fetch(`${basename}/movie/${id}/similar?api_key=${key}&language=${selectedLanguage}&page=${page}`);
         const json = await res.json();
 
         if(!json.results || json.results.length === 0){
@@ -111,7 +116,7 @@ export default {
 
     searchMovie: async (query, page = 1) => {
 
-        const res = await fetch(`${basename}/search/movie?api_key=${key}&query=${query}&language=pt-BR&page=${page}`);
+        const res = await fetch(`${basename}/search/movie?api_key=${key}&query=${query}&language=${selectedLanguage}&page=${page}`);
         const json = await res.json();
 
         if(!json.results){
