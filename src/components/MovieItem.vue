@@ -6,7 +6,7 @@
                     {{movie.overview}}
                 </b-card-text>
                 <template #footer>
-                    <small class="text-light">Release date: {{movie.release_date}}</small>
+                    <small class="text-light">{{$t('release_date')}}: {{movie.release_date}}</small>
                 </template>
             </b-card>
         </router-link>

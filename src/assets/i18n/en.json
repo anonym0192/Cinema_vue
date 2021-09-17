@@ -1,0 +1,25 @@
+{
+    "lang": "Lang",
+    "movie_list": "Movie List",
+    "popular": "Popular",
+    "upcoming": "Upcoming",
+    "playing_now": "Playing now",
+    "genres": "Genres",
+    "original_language": "Original Language",
+    "country": "Country",
+    "rating": "Rating",
+    "web_page": "Web Page",
+    "release_date": "Release Date",
+    "duration": "Duration",
+    "budget": "Budget",
+    "show_all": "Show All",
+    "gallery": "Gallery",
+    "cast": "Cast",
+    "similar_movies": "Similar Movies",
+    "as": "as",
+    "search_placeholder": "Search for a movie",
+    "page_404": "Page not found",
+    "results_for": "Results for"   
+
+    
+}

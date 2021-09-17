@@ -5,7 +5,7 @@
             <movie-list-skeleton v-if="loading" />
 
             <section v-else class="movies-list">
-                <h1>Movie List</h1>
+                <h1>{{$t('movie_list')}}</h1>
                 <div class="row">
                     <movie-item v-for="movie in movieList.results" :key="movie.id" :movie="movie"  />
                 </div>          

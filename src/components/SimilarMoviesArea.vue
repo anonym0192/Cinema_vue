@@ -1,6 +1,6 @@
 <template>
     <section class="similar-section mt-5" v-if="movies">
-        <h2 class="section-title">Similar movies</h2>
+        <h2 class="section-title">{{$t('similar_movies')}}</h2>
         <div class="row">    
             <movie-item :movie="movie"  v-for="movie in movies" :key="movie.id"/>
         </div>

@@ -13,31 +13,31 @@
                     <h2 :key="movie.id">{{movie.title}}</h2> 
                     <p class="text-wrap overflow-auto">{{movie.overview}}</p>
                     <p v-if="movie.genres">
-                        <strong>Genres: </strong>
+                        <strong>{{$t('genres')}}: </strong>
                         <b-badge v-for="genre in movie.genres" :key="genre.id" class="text-light mx-1 py-2" style="background-color: var(--indigo)">
                             {{genre.name}}
                         </b-badge>
                     </p> 
-                    <p><strong>Original Language: </strong>{{movie.original_language}}</p>
+                    <p><strong>{{$t('original_language')}}: </strong>{{movie.original_language}}</p>
                     <p v-if="movie.production_countries.length > 0">
-                        <strong>Country: </strong>{{movie.production_countries[0].name}}
+                        <strong>{{$t('country')}}: </strong>{{movie.production_countries[0].name}}
                     </p>
                     <p v-if="movie.vote_average">
-                        <strong>Rating: </strong> 
+                        <strong>{{$t('rating')}}: </strong> 
                         <meter min="0" max="100" optimum="100" low="40" high="70" :value="movie.vote_average*10"></meter> 
                         {{movie.vote_average}}
                     </p> 
                     <p v-if="movie.homepage">
-                        <strong>Homepage: </strong>
+                        <strong>{{$t('web_page')}}: </strong>
                         <a :href="movie.homepage">{{movie.homepage}}</a>
                     </p>
                 </div>
             </div>
         </transition>
         <div class="movie-meta">
-            <span><b-icon icon="calendar"></b-icon> Release Date {{movie.release_date}}</span>
-            <span><b-icon icon="clock"></b-icon> Duration {{movie.runtime}}</span>
-            <span><b-icon icon="cash"></b-icon> Budget {{movie.budget}}</span>
+            <span><b-icon icon="calendar"></b-icon> {{$t('release_date')}} {{movie.release_date}}</span>
+            <span><b-icon icon="clock"></b-icon> {{$t('duration')}} {{movie.runtime}}</span>
+            <span><b-icon icon="cash"></b-icon> {{$t('budget')}} {{movie.budget}}</span>
         </div> 
     </section>
 </template>

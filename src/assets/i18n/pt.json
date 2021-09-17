@@ -1,0 +1,25 @@
+{
+    
+    "lang": "Idioma",
+    "movie_list": "Lista de Filmes",
+    "popular": "Populares",
+    "upcoming": "Em Breve",
+    "playing_now": "Em Cartaz",
+    "genres": "Generos",
+    "original_language": "Idioma Original",
+    "country": "País",
+    "rating": "Classificação",
+    "web_page": "Página Web",
+    "release_date": "Data de Estréia",
+    "duration": "Duração",
+    "budget": "Orçamento",
+    "show_all": "Mostrar Todos",
+    "gallery": "Galeria",
+    "cast": "Elenco",
+    "similar_movies": "Filmes Similares",
+    "as": "como",
+    "search_placeholder": "Procure por um filme",
+    "page_404": "Página não encontrada",
+    "results_for": "Resultados para"   
+
+}

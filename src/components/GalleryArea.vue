@@ -1,6 +1,6 @@
 <template>
     <section class="gallery-section mt-5" v-if="haveImages">
-        <h2 class="section-title">Gallery</h2>
+        <h2 class="section-title">{{$t('gallery')}}</h2>
         <vue-agile class="main" ref="main" :options="options1" :as-nav-for="asNavFor1">
             <div class="slide" v-for="(slide, index) in images" :key="index" :class="`slide--${index}`">
                 <img :src="slide" :alt="`${index}`" />

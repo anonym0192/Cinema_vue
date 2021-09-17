@@ -1,8 +1,8 @@
 <template>   
     <section class="cast-section mt-5" v-if="cast">
         <h2 class="d-flex justify-content-between" >
-            Cast 
-            <b-form-checkbox switch size="lg" v-model="showAll">Show All</b-form-checkbox>
+            {{$t('cast')}} 
+            <b-form-checkbox switch size="lg" v-model="showAll">{{$t('show_all')}}</b-form-checkbox>
         </h2>
 
         <div :class="[{'show-all': showAll}, 'cast-area']">
@@ -13,7 +13,7 @@
                 </div>
                 <div class="card-body">
                     <span>{{actor.name}}</span>
-                    <span v-if="actor.character">as</span>
+                    <span v-if="actor.character">{{$t('as')}}</span>
                     <span>{{actor.character}}</span>
                 </div>
             </div>

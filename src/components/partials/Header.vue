@@ -8,7 +8,7 @@
             <b-collapse id="nav-collapse" is-nav>
                 <!-- Right aligned nav items -->
                 <b-navbar-nav class="ml-auto">
-                    <b-nav-item-dropdown text="Lang" right>
+                    <b-nav-item-dropdown :text="$t('lang')" right>
                         <b-dropdown-item href="#">EN</b-dropdown-item>
                         <b-dropdown-item href="#">ES</b-dropdown-item>
                         <b-dropdown-item href="#">PT</b-dropdown-item>

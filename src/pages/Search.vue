@@ -4,7 +4,7 @@
             <movie-list-skeleton v-if="loading" />
 
             <section v-else class="movies-list">
-                    <h1>Results for : {{$route.params.query}}</h1>
+                    <h1>{{$t('results_for')}} : {{$route.params.query}}</h1>
                     <div class="row">
                         <movie-item v-for="movie in movieList.results" :key="movie.id" :movie="movie"  />
                     </div>

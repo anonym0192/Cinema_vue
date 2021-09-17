@@ -1,6 +1,6 @@
 <template>
     <b-input-group class="mb-2 border border-light rounded-lg">
-        <b-form-input id="search-field" @keydown.enter="handleSearch" size="lg" v-model="query" placeholder="Search for a movie"></b-form-input>
+        <b-form-input id="search-field" @keydown.enter="handleSearch" size="lg" v-model="query" :placeholder="$t('search_placeholder')"></b-form-input>
         <b-input-group-prepend @click="handleSearch" style="cursor: pointer; bg-transparent">
             <span class="input-group-text"><b-icon icon="search"></b-icon></span>
         </b-input-group-prepend>
