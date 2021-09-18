@@ -14,7 +14,7 @@
                     <p class="text-wrap overflow-auto">{{movie.overview}}</p>
                     <p v-if="movie.genres">
                         <strong>{{$t('genres')}}: </strong>
-                        <b-badge v-for="genre in movie.genres" :key="genre.id" class="text-light mx-1 py-2" style="background-color: var(--indigo)">
+                        <b-badge v-for="genre in movie.genres" :key="genre.id" class="text-light mx-1 py-2 mb-1" style="background-color: var(--indigo)">
                             {{genre.name}}
                         </b-badge>
                     </p> 

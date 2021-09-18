@@ -19,7 +19,8 @@
     "as": "as",
     "search_placeholder": "Search for a movie",
     "page_404": "Page not found",
-    "results_for": "Results for"   
+    "results_for": "Results for",
+    "all_rights_message": "All rights reserved"  
 
     
 }

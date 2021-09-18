@@ -10,7 +10,7 @@
     "country": "País",
     "rating": "Classificação",
     "web_page": "Página Web",
-    "release_date": "Data de Estréia",
+    "release_date": "Data de Estreia",
     "duration": "Duração",
     "budget": "Orçamento",
     "show_all": "Mostrar Todos",
@@ -20,6 +20,7 @@
     "as": "como",
     "search_placeholder": "Procure por um filme",
     "page_404": "Página não encontrada",
-    "results_for": "Resultados para"   
+    "results_for": "Resultados para",
+    "all_rights_message": "Todos os direitos reservados"   
 
 }
