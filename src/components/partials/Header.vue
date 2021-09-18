@@ -1,7 +1,7 @@
 <template>      
     <b-navbar tag="header" toggleable="lg" type="dark" style="background-color: var(--indigo)">
         <div class="container">
-            <b-navbar-brand href="/">Movies</b-navbar-brand>
+            <b-navbar-brand href="/"><img class="logo" src='/logo.png' alt="Logo"></b-navbar-brand>
 
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -22,6 +22,7 @@
 
 <script>
 
+//import logo from '../../assets/images/logo.png';
 import _ from 'lodash';
 
 
@@ -42,7 +43,10 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.logo{
+    width: 100px;
+    margin: 0 10px;
+}
 
 </style>

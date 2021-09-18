@@ -17,6 +17,8 @@ Display the movie cast
 
 See movie images and galleries
 
+Change the site language between PT-BR, EN, ES
+
 
 ## Libs used in project
 
@@ -29,6 +31,7 @@ See movie images and galleries
     "vue-agile": "^1.1.3",
     "vue-router": "^3.5.1",
     "vuex": "^3.6.2"
+    "vue-i18n": "^8.25.1",
     
 
 ## Configuration

@@ -3,7 +3,16 @@ import api from '../../api';
 export default {
 	setError({ commit }) {
 		commit("setError", true);
-		commit("setErrorMessage", "Error");
+		commit("setErrorMessage", "An Error ocorred in requesting the data");
+	},
+    cleanSelectedMovie({ commit }) {
+		commit("setSelectedMovie", {
+                data: null,
+                cast: null,
+                images: [],
+                similar_movies: null
+        });
+		
 	},
 	async getMovieList({ commit, dispatch, state }, {type , page}) {
 		if (state.loading == false) {
@@ -36,10 +45,6 @@ export default {
     },
     async getMovieById({commit, dispatch, getters}, id){
 
-        if(!id){
-            return;
-        }
-
         try{
 
             commit("setLoading", true);
@@ -57,7 +62,9 @@ export default {
             });
 
         }catch(error){
+            console.error(error.message);
             dispatch('setError');
+            dispatch('cleanSelectedMovie');
         }finally{
             commit("setLoading", false);
             document.title = `${getters['getMovieTitle']} - VueMovies`;

@@ -23,11 +23,6 @@
 
     export default {
         name: 'Movie',
-        data: function(){
-            return {
-            
-            }
-        },
         components: {
             MovieInfoArea, GalleryArea, CastArea, SimilarMoviesArea, MoviePageSkeleton
         },
@@ -41,6 +36,7 @@
             async getMovieData(){
                 window.scrollTo(0,0);
                 await this.getMovieById(this.$route.params.id);
+
                 !this.movieExists() ? this.$router.push({name: 'home'}) : '';
             },
             ...mapActions('movieData',['getMovieById', 'getMovieListData'])

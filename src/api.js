@@ -39,6 +39,9 @@ export default {
     getMovie: async (id) => {
 
         const res = await fetch(`${basename}/movie/${id}?api_key=${key}&language=${selectedLanguage}`);
+
+        if( res.status == 404) return null;
+
         const json = await res.json();
 
         if(json.status_message){

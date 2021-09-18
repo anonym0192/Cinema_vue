@@ -1,5 +1,5 @@
 export default {
     getMovieTitle(state){
-        return state.selectedMovie.data.title || '';
+        return state.selectedMovie.data?.title || '';
     }
 }
