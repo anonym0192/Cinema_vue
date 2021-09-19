@@ -22,14 +22,18 @@ const router = new VueRouter({
 router.beforeEach((to, from, next) => {
 
     switch(to.name){
-        case 'home':          
-            document.title = `${_.startCase(to.params.type?.replace('_',' '))} - VueMovies`;
+        case 'home':
+            console.log('type : ' + to.params.type);
+            
+            const title = to.params.type ? `${_.startCase(to.params.type?.replace('_',' '))} - Cinema_Vue` : 'Cinema_Vue'; 
+
+            document.title = title;
             break;
         case 'movie':
-            document.title = `Movie Info - VueMovies`;
+            document.title = `Movie Info - Cinema_Vue`;
             break;
         case 'search':
-            document.title = `${to.params.query} - VueMovies`;
+            document.title = `${to.params.query} - Cinema_Vue`;
             break; 
     }
     next();

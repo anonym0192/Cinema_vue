@@ -11,7 +11,7 @@
                 
                 <div class="movie-info col-md-7 col-12">
                     <h2 :key="movie.id">{{movie.title}}</h2> 
-                    <p class="text-wrap overflow-auto">{{movie.overview}}</p>
+                    <p class="text-wrap overflow-auto" style="font-size: 17px;">{{movie.overview}}</p>
                     <p v-if="movie.genres">
                         <strong>{{$t('genres')}}: </strong>
                         <b-badge v-for="genre in movie.genres" :key="genre.id" class="text-light mx-1 py-2 mb-1" style="background-color: var(--indigo)">
@@ -37,7 +37,7 @@
         <div class="movie-meta">
             <span><b-icon icon="calendar"></b-icon> {{$t('release_date')}} {{movie.release_date}}</span>
             <span><b-icon icon="clock"></b-icon> {{$t('duration')}} {{movie.runtime}} min</span>
-            <span><b-icon icon="cash"></b-icon> {{$t('budget')}} {{movie.budget}} $</span>
+            <span v-if="movie.budget"><b-icon icon="cash"></b-icon> {{$t('budget')}} {{movie.budget}} $</span>
         </div> 
     </section>
 </template>

@@ -2,10 +2,6 @@
     <b-pagination-nav
         :number-of-pages="movieList.total_pages"
         base-url="?page="
-        first-text="First"
-        prev-text="Prev"
-        next-text="Next"
-        last-text="Last"
         :value="movieList.page"
         use-router
     ></b-pagination-nav>

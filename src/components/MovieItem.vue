@@ -1,7 +1,7 @@
 <template>
-    <div class="col-sm-12 col-lg-4 col-md-6">
+    <div class="col-sm-12 col-lg-4 col-md-6 mt-5" >
         <router-link :to="{ name: 'movie', params: { id:  movie.id}}" class="movie-link">
-            <b-card :title="movie.title" :img-src="movie.poster_path" :img-alt="movie.title" img-top class="mt-5">
+            <b-card :title="movie.title" :img-src="movie.poster_path" :img-alt="movie.title" img-top >
                 <b-card-text>
                     {{movie.overview}}
                 </b-card-text>
