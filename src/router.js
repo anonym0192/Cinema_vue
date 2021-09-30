@@ -9,7 +9,7 @@ import _ from 'lodash';
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-    mode: 'history',
+    mode: 'hash',
     base: __dirname,
     routes: [
       {path: '/search/:query', component: Search, name: 'search'},
@@ -23,17 +23,16 @@ router.beforeEach((to, from, next) => {
 
     switch(to.name){
         case 'home':
-            console.log('type : ' + to.params.type);
-            
-            const title = to.params.type ? `${_.startCase(to.params.type?.replace('_',' '))} - Cinema_Vue` : 'Cinema_Vue'; 
+                    
+            const title = to.params.type ? `${_.startCase(to.params.type?.replace('_',' '))} - cinema_vue` : 'cinema_vue'; 
 
             document.title = title;
             break;
         case 'movie':
-            document.title = `Movie Info - Cinema_Vue`;
+            document.title = `Movie Info - cinema_vue`;
             break;
         case 'search':
-            document.title = `${to.params.query} - Cinema_Vue`;
+            document.title = `${to.params.query} - cinema_vue`;
             break; 
     }
     next();

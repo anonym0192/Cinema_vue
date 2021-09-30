@@ -1,7 +1,7 @@
 <template>      
     <b-navbar tag="header" toggleable="lg" type="dark" style="background-color: var(--indigo)">
         <div class="container">
-            <b-navbar-brand href="/"><img class="logo" src='/logo.png' alt="Logo"></b-navbar-brand>
+            <b-navbar-brand :to="{name:'home', params:{type:''}}"><img class="logo" src='logo.png' alt="Logo"></b-navbar-brand>
             <!-- Right aligned nav items -->
             <b-nav class="ml-auto">
                 <b-nav-item-dropdown :text="$t('lang')" right>
