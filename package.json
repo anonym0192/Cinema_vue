@@ -1,7 +1,7 @@
 {
   "name": "cinema_Vue",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://anonym0192.github.io/cinema_vue",
   "scripts": {
     "serve": "vue-cli-service serve --skip-plugins @vue/cli-plugin-eslint",
