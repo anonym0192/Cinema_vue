@@ -1,6 +1,6 @@
-const key = process.env.VUE_APP_API_KEY;//'ab09e88f4eab1d64c6cd9285f52979a0';
-const basename = process.env.VUE_APP_API_BASEURL;//'https://api.themoviedb.org/3';
-const image_base = process.env.VUE_APP_IMAGE_BASEURL;//'https://image.tmdb.org/t/p';
+const key = process.env.VUE_APP_API_KEY;
+const basename = process.env.VUE_APP_API_BASEURL;
+const image_base = process.env.VUE_APP_IMAGE_BASEURL;
 
 //import lang from "./utils/languages";
 import placeholder from './assets/images/No_picture_available.png'
