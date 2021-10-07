@@ -36,6 +36,7 @@ Change the site language between PT-BR, EN, ES
 
 ## Configuration
 
+A key code for TMDB api is required, and should be filled in the field VUE_APP_API_KEY in .env file. It can be generated in its website https://www.themoviedb.org
 
 # vue_movie
 
