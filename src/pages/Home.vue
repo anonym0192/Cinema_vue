@@ -41,7 +41,7 @@
                     type: this.$route.params.type, 
                     page: this.$route.query.page
                 });
-            console.log(this.movieList);
+            //console.log(this.movieList);
         },
 
         watch: {
